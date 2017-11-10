@@ -41,10 +41,10 @@ function updateBoard(){
     }
                 
     $("#word").append("<br />");
-    $("#word").append("<span class='hint'>HINT: "+selectedHint+"</span>");
-                
-                
+    
+    
 }
+
 function initBoard(){
     for (var letter in selectedWord){
         board += '_';
@@ -60,6 +60,13 @@ function createLetters(){
     checkLetter($(this).attr("id"));
     disableButton($(this));
 });
+$(".hintBtn").click(function(){
+        $("#word").append("<span class='hint'>HINT: "+selectedHint+"</span>");
+        disableButton($(this));
+    })
+$(".replayBtn").on("click",function(){
+    location.reload();
+});   
 }
             
             
@@ -113,9 +120,8 @@ function endGame(win){
     }
     
             
-$(".replayBtn").on("click",function(){
-    location.reload();
-});
+
+
 }
             
 function disableButton(btn){
@@ -123,5 +129,4 @@ function disableButton(btn){
     btn.attr("class", "btn btn-danger");
 }
             
-
-            
+      

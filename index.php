@@ -17,15 +17,16 @@
                 <h4>Javascript Edition</h4>
             </header>
             <div id="word"></div>
+            <button class="hintBtn btn">Hint</button>
             <div id="letters"></div>
             
             <div id="won">
                 <h2>You Won!</h2>
-                <button class="replaybtn btn btn-success">Play Again</button>
+                <button class="replaybtn btn btn-success" value="Refresh Page" onClick="window.location.reload()">Play Again</button>
             </div>
             <div id="lost">
                 <h2>You Lost!</h2>
-                <button class="replayBtn btn btn-warning">Play Again</button>
+                <button class="replaybtn btn btn-success" value="Refresh Page" onClick="window.location.reload()">Play Again</button>
             </div>
             <div id="man">
                 <img src="img/stick_0.png" id="hangImg"> 
